@@ -1,0 +1,26 @@
+.outline {
+  position: absolute;
+  top: -0.1em;
+  left: -0.1em;
+  right: -1.3em;
+  bottom: -0.1em;
+  border: 5px solid rgb(255, 111, 111);
+  border-radius: 25px;
+  margin: 0.1em;
+}
+
+.file-item {
+  align-self: center;
+  border-radius: 25px;
+  height: 100%;
+  width: 100px;
+  padding: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
