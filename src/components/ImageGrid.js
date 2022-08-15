@@ -18,6 +18,7 @@ const Image = ({ image, onSelectImage, selectedImage }) => {
       }}
     >
       <img alt={`img - ${image.id}`} src={image.src} className="file-img" />
+      <small className="file-name-text">{image.file.name}</small>
       {selectedImage == image.file.name && (
         <motion.div
           layoutId="outline"

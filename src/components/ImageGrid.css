@@ -20,7 +20,9 @@
   position: relative;
   margin: 0;
 }
-
+.file-name-text {
+  font-size: xx-small;
+}
 * {
   box-sizing: border-box;
 }
