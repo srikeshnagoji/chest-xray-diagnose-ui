@@ -40,6 +40,31 @@ h1 {
   transition: all 0.4s ease 0s;
 }
 
+.contact {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: space-between;
+  right: 1em;
+  top: 1em;
+}
+
+.contact a {
+  margin-top: 0.2em;
+}
+
+.linkedin_icon {
+  z-index: 1;
+  /* position: absolute; */
+  /* right: 1em;
+  top: 1em; */
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
+}
+
 h1 span {
   display: block;
   font-size: 0.5em;
@@ -99,4 +124,23 @@ h1 em {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+
+.btn-grad:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.info_content {
+  font-size: small;
+  margin: 10em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.info_content p {
+  margin: 1em;
 }

@@ -42,13 +42,20 @@ function Dropzone({ onDrop, accept, open }) {
             </p>
           )}
         </div>
-        <button type="button" onClick={open} className="btn">
-          Click to select files
-        </button>
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        >
+          <button type="button" onClick={open} className="btn">
+            Click to select files
+          </button>
+        </motion.div>
       </div>
-      {/* <aside>
-        <ul>{files}</ul>
-      </aside> */}
+      <p className="helper_text">
+        Note: Please upload only chest x-ray images.
+      </p>
     </motion.div>
   );
 }

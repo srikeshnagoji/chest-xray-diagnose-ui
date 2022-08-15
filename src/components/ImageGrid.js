@@ -10,25 +10,31 @@ const spring = {
 // Rendering individual images
 const Image = ({ image, onSelectImage, selectedImage }) => {
   return (
-    <div
-      className="file-item"
-      onClick={() => {
-        console.log("selected " + image.file.name);
-        onSelectImage(image.file.name);
-      }}
+    <motion.div
+      className="box"
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
-      <img alt={`img - ${image.id}`} src={image.src} className="file-img" />
-      <small className="file-name-text">{image.file.name}</small>
-      {selectedImage == image.file.name && (
-        <motion.div
-          layoutId="outline"
-          className="outline"
-          initial={false}
-          // animate={{ borderColor: "#ff0055" }}
-          transition={spring}
-        />
-      )}
-    </div>
+      <div
+        className="file-item"
+        onClick={() => {
+          console.log("selected " + image.file.name);
+          onSelectImage(image.file.name);
+        }}
+      >
+        <img alt={`img - ${image.id}`} src={image.src} className="file-img" />
+        <small className="file-name-text">{image.file.name}</small>
+        {selectedImage == image.file.name && (
+          <motion.div
+            layoutId="outline"
+            className="outline"
+            initial={false}
+            // animate={{ borderColor: "#ff0055" }}
+            transition={spring}
+          />
+        )}
+      </div>
+    </motion.div>
   );
 };
 
