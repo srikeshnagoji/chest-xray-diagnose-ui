@@ -100,7 +100,7 @@ function App() {
     }
     // sleep for 5 sec for testing loader
     // --await new Promise((resolve) => setTimeout(resolve, 5000));
-
+    setSelected(images[0].file.name);
     setOpen(false);
   };
 
